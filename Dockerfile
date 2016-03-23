@@ -8,5 +8,7 @@ RUN git clone https://github.com/h2o/h2o \
     && cd h2o \
     && git submodule update --init --recursive \
     && cmake . \
-    && make h2o
+    && make install h2o \
+    && cd .. \
+    && rm -rf /h2o
 
